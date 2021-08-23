@@ -1,0 +1,4 @@
+.idea
+generators/php/vendor
+output/*.pdf
+output/*.png

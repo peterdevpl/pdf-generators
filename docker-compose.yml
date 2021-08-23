@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  php:
+    container_name: pdf-php
+    build:
+      context: ./
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - ./documents:/documents:ro,cached
+      - ./generators/php:/php:rw,cached
+      - ./output:/output:rw,cached
+
+  python:
+    container_name: pdf-python
+    build:
+      context: ./
+      dockerfile: ./docker/python/Dockerfile
+    volumes:
+      - ./documents:/documents:ro,cached
+      - ./generators/python:/python:rw,cached
+      - ./output:/output:rw,cached
