@@ -2,6 +2,8 @@
 
 require './vendor/autoload.php';
 
+echo 'Building with TCPDF...' . PHP_EOL;
+
 $html = file_get_contents('/documents/invoice.html');
 $outputDir = '/output/';
 
