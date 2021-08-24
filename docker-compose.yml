@@ -20,3 +20,13 @@ services:
       - ./documents:/documents:ro,cached
       - ./generators/python:/python:rw,cached
       - ./output:/output:rw,cached
+
+  ubuntu:
+    container_name: pdf-ubuntu
+    build:
+      context: ./
+      dockerfile: ./docker/ubuntu/Dockerfile
+    volumes:
+      - ./documents:/documents:ro,cached
+      - ./generators/ubuntu:/ubuntu:rw,cached
+      - ./output:/output:rw,cached
