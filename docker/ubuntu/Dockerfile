@@ -12,7 +12,7 @@ RUN curl -L -o wkhtml.deb "https://github.com/wkhtmltopdf/packaging/releases/dow
     dpkg -i wkhtml.deb && \
     rm -f wkhtml.deb
 
-RUN curl -L -o prince.deb "https://www.princexml.com/download/prince_14.2-1_ubuntu20.04_amd64.deb" && \
+RUN curl -L -o prince.deb "https://www.princexml.com/download/prince_15.3-1_ubuntu20.04_amd64.deb" && \
     dpkg -i prince.deb && \
     rm -f prince.deb
 
